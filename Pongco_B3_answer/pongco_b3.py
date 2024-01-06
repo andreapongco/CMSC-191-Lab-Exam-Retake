@@ -20,6 +20,8 @@ with open("../input_file/Exam_Table.csv", "r") as input_file:
         for row in reader:
             if row['Scientific Name'] not in unique_scientific_names:
                 unique_scientific_names.append(row['Scientific Name'])
-                writer.writerow({'Scientific Name' : f"{row['Scientific Name']}"})
+                writer.writerow({'Scientific Name' : row['Scientific Name']})
+
+
 
 

@@ -18,7 +18,7 @@ with open("../input_file/Exam_Table.csv", "r") as input_file:
         unique_scientific_names = []
 
         for row in reader:
-            if row['Scientific Name'] not in unique_scientific_names:
+            if row['Scientific Name'] not in unique_scientific_names and row['Scientific Name'] != "":
                 unique_scientific_names.append(row['Scientific Name'])
                 writer.writerow({'Scientific Name' : row['Scientific Name']})
 
